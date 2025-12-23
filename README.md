@@ -121,5 +121,6 @@ This project is developed as part of an academic mini/major project and demonstr
 # 🧑‍💻 Developed By
 
 Jiya Modi
-Depaartment - CPC
+<br>
+Department - CPC<br>
 Gujarat University
