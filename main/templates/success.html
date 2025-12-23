@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}Application Successful{% endblock %}
+
+{% block content %}
+<div class="container mt-5 text-center">
+  <div class="alert alert-primary shadow p-4">
+    <h2>✅ Application Submitted Successfully!</h2>
+    <p>You have successfully applied for the job position.</p>
+    <p><strong>Note:</strong> You can track your application status on your dashboard.</p>
+    <a href="{% url 'student_dashboard' %}" class="btn btn-primary mt-3">Go to Dashboard</a>
+  </div>
+</div>
+{% endblock %}

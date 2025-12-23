@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}View Applicants{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'view_application.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="container mt-4 applications-container">
+  <h3>Applicants for {{ job.title }}</h3>
+
+<div class="applications-table">
+  <table class="table mb-0">
+    <thead>
+      <tr>
+        <th>Student Name</th>
+        <th>Branch</th>
+        <th>CGPA</th>
+        <th>Resume</th>
+        <th>Status</th>
+        <th>Update</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      {% for app in applications %}
+      <tr>
+        <td>{{ app.student.user.first_name }}</td>
+        <td>{{ app.student.branch }}</td>
+        <td>{{ app.student.cgpa }}</td>
+
+        <td>
+          {% if app.student.resume %}
+            <a href="{{ app.student.resume.url }}" target="_blank" class="resume-btn">View Resume</a>
+          {% else %}
+            No Resume
+          {% endif %}
+        </td>
+
+        <!-- Status Badge -->
+        <td>
+          {% if app.status == "Applied" %}
+            <span class="badge bg-warning text-dark">Applied</span>
+          {% elif app.status == "Shortlisted" %}
+            <span class="badge bg-info text-dark">Shortlisted</span>
+          {% elif app.status == "Rejected" %}
+            <span class="badge bg-danger">Rejected</span>
+          {% elif app.status == "Selected" %}
+            <span class="badge bg-success">Selected</span>
+          {% endif %}
+        </td>
+
+        <!-- Update Form -->
+        <td>
+          <form method="POST" action="{% url 'update_status' app.id %}" class="update-form">
+            {% csrf_token %}
+            <select name="status" class="form-select form-select-sm">
+              <option value="Applied" {% if app.status == "Applied" %}selected{% endif %}>Applied</option>
+              <option value="Shortlisted" {% if app.status == "Shortlisted" %}selected{% endif %}>Shortlisted</option>
+              <option value="Rejected" {% if app.status == "Rejected" %}selected{% endif %}>Rejected</option>
+              <option value="Selected" {% if app.status == "Selected" %}selected{% endif %}>Selected</option>
+            </select>
+            <button type="submit" class="update-btn">Update</button>
+          </form>
+        </td>
+
+      </tr>
+      {% empty %}
+      <tr>
+        <td colspan="6">No applicants yet.</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+
+  </table>
+
+</div>
+{% endblock %}

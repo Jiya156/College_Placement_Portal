@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}All Students{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'view_student.css' %}">
+{% endblock %}
+
+{% block content %}
+
+
+<div class="container mt-4 students-container">
+
+  <h3>All Students</h3>
+  <p class="text-muted">Overview of all student profiles and their application status.</p>
+
+  <table class="table table-bordered ">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Branch</th>
+        <th>CGPA</th>
+        <th>Resume</th>
+        <th>Applications</th>
+      </tr>
+      
+    </thead>
+
+    <tbody>
+  {% for item in student_data %}
+  <tr>
+    <td>{{ item.student.user.first_name }} {{ item.student.user.last_name }}</td>
+    <td>{{ item.student.branch }}</td>
+    <td>{{ item.student.cgpa }}</td>
+
+    <!-- Resume -->
+    <td>
+      {% if item.student.resume %}
+        <a href="{{ item.student.resume.url }}" target="_blank"
+           class="btn btn-sm btn-primary">View</a>
+      {% else %}
+        <span class="text-muted">No Resume</span>
+      {% endif %}
+    </td>
+
+    <!-- Applications -->
+    <td>
+      {% if item.applications %}
+        <ul class="list-unstyled mb-0">
+          {% for app in item.applications %}
+            <li>
+              <strong>{{ app.job.title }}</strong> —
+              {{ app.status }}
+              <span class="text-muted">
+                ({{ app.job.company.company_name }})
+              </span>
+            </li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <span class="text-muted">No applications yet</span>
+      {% endif %}
+    </td>
+  </tr>
+  {% endfor %}
+</tbody>
+
+
+  </table>
+</div>
+{% endblock %}

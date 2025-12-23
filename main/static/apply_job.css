@@ -1,0 +1,101 @@
+/* ===============================
+   APPLY JOB PAGE STYLES
+   =============================== */
+
+/* Page Background Wrapper */
+.apply-job-page {
+    min-height: calc(100vh - 120px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Main Card */
+.apply-job-card {
+    background: #ffffff;
+    border-radius: 22px;
+    max-width: 650px;
+    width: 100%;
+    box-shadow: 0 22px 55px rgba(0, 0, 0, 0.25);
+    padding: 35px;
+}
+
+/* Heading */
+.apply-job-card h3 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #5a2b7a;
+}
+
+/* Job Title */
+.apply-job-card h4 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #6b2e8f;
+    margin-bottom: 10px;
+}
+
+/* Job Details Section */
+.job-details {
+    background: linear-gradient(135deg, #f3ecff, #f8f5ff);
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-left: 6px solid #8e44ad;
+}
+
+/* Job Detail Text */
+.job-details p {
+    margin-bottom: 6px;
+    font-size: 15px;
+    color: #3d2358;
+}
+
+/* Highlight Labels */
+.job-details strong {
+    color: #4b1d6b;
+}
+
+/* Buttons */
+.apply-job-card .btn {
+    border-radius: 16px;
+    padding: 8px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+/* Confirm Button */
+.apply-job-card .btn-success {
+    background: linear-gradient(135deg, #6a1b9a, #8e44ad);
+    border: none;
+}
+
+.apply-job-card .btn-success:hover {
+    background: linear-gradient(135deg, #5a1485, #7d3c98);
+}
+
+/* Cancel Button */
+.apply-job-card .btn-secondary {
+    background: linear-gradient(135deg, #7f8c8d, #95a5a6);
+    border: none;
+}
+
+.apply-job-card .btn-secondary:hover {
+    background: linear-gradient(135deg, #6c7a7b, #7f8c8d);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .apply-job-card {
+        padding: 25px;
+    }
+
+    .apply-job-card h3 {
+        font-size: 24px;
+    }
+
+    .apply-job-card h4 {
+        font-size: 20px;
+    }
+}

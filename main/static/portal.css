@@ -1,0 +1,153 @@
+/* ================================
+   GLOBAL
+================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #e0c1ed, #a354b5);
+    color: #333;
+}
+
+/* ================================
+   NAVBAR
+================================ */
+.navbar {
+    height: 70px;
+    background: linear-gradient(135deg, #6e268f, #ac65c2) !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+}
+
+.navbar-brand {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+
+/* ================================
+   LOGIN WRAPPER (CENTER)
+================================ */
+.login-wrapper {
+    min-height: calc(100vh - 70px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 15px;
+    animation: fadeSlide 0.8s ease forwards;
+}
+
+/* ================================
+   LOGIN CARD (GLASS EFFECT)
+================================ */
+.login-wrapper .card {
+    width: 100%;
+    max-width: 420px;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.35);
+}
+
+.card-body {
+    padding: 35px;
+}
+
+/* ================================
+   CARD TITLE
+================================ */
+.card-title {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* ================================
+   FORM ELEMENTS
+================================ */
+label {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+.form-control {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    border-radius: 12px;
+    padding: 12px 14px;
+    font-size: 15px;
+    background-color: #eef4ff;
+    border: 1px solid #d6e0ff;
+}
+
+.form-control:focus {
+    border-color: #a81ccb;
+    box-shadow: 0 0 0 0.18rem rgba(123, 47, 247, 0.25);
+    background-color: #ffffff;
+}
+
+/* ================================
+   LOGIN BUTTON
+================================ */
+.btn-primary {
+    width: 100%;
+    margin-top: 10px;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 14px;
+    border: none;
+    background: linear-gradient(135deg, #c376da, #9644a2);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(241, 7, 163, 0.45);
+}
+
+/* ================================
+   ERROR MESSAGE
+================================ */
+.text-danger {
+    text-align: center;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+/* ================================
+   ANIMATION
+================================ */
+@keyframes fadeSlide {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+@media (max-width: 576px) {
+    .card-body {
+        padding: 25px;
+    }
+
+    .card-title {
+        font-size: 22px;
+    }
+}

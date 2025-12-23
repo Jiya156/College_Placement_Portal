@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Admin Dashboard{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'admin.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="admin-page">
+    <div class="container">
+
+        <h3 class="admin-title">Admin Dashboard</h3>
+        <p class="admin-subtitle">
+            Welcome! Manage students, companies, and training resources.
+        </p>
+
+        <div class="admin-card">
+            <div class="admin-list">
+                <a href="{% url 'view_students' %}">View All Students</a>
+                <a href="{% url 'resource_list' %}">View Training Resources</a>
+                <a href="{% url 'upload_resource' %}">Upload Training Resource</a>
+                <a href="{% url 'view_companies' %}">View All Companies</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

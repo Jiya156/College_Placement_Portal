@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Student Dashboard{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'student_dashboard.css' %}">
+{% endblock %}
+
+
+{% block content %}
+<div class="container student-dashboard">
+
+  <h3>Welcome, {{ user.first_name }}</h3>
+  <p>Your placement status: <strong>{{ student_profile.placement_status }}</strong></p>
+
+  <div class="mt-4">
+    <h5>Available Jobs</h5>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Company</th>
+          <th>Role</th>
+          <th>Package</th>
+          <th>Status / Action</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        {% for job in jobs %}
+        <tr>
+          <td>{{ job.company.company_name }}</td>
+          <td>{{ job.title }}</td>
+          <td>{{ job.package }}</td>
+
+          <td class="action-cell">
+            {% if job.application_status %}
+
+            {% if job.application_status == "Applied" %}
+            <span class="status-btn status-applied">Applied</span>
+
+            {% elif job.application_status == "Shortlisted" %}
+            <span class="status-btn status-shortlisted">Shortlisted</span>
+
+            {% elif job.application_status == "Rejected" %}
+            <span class="status-btn status-rejected">Rejected</span>
+
+            {% elif job.application_status == "Selected" %}
+            <span class="status-btn status-selected">Selected</span>
+            {% endif %}
+
+            {% else %}
+
+            {% if student_profile.placement_status == "Eligible" %}
+            <a href="{% url 'apply_job' job.id %}" class="action-btn apply-btn">
+              Apply
+            </a>
+            {% else %}
+            <span class="status-btn status-not-eligible">Not Eligible</span>
+            {% endif %}
+
+            {% endif %}
+          </td>
+
+
+        </tr>
+        {% empty %}
+        <tr>
+          <td colspan="4">No jobs available</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+
+  <hr>
+
+  <h5>Your Resume</h5>
+<div class="resume-actions">
+  {% if student_profile.resume %}
+    <a href="{{ student_profile.resume.url }}" target="_blank" class="resume-btn view-btn">
+      View Resume
+    </a>
+
+    <a href="{% url 'delete_resume' %}" class="resume-btn delete-btn"
+       onclick="return confirm('Are you sure you want to delete your resume?');">
+      Delete
+    </a>
+  {% else %}
+    <span class="text-muted">No resume uploaded.</span>
+  {% endif %}
+</div>
+
+<div class="resume-actions mt-3">
+  <a href="{% url 'upload_resume' %}" class="resume-btn upload-btn">
+    Upload Resume
+  </a>
+
+  <a href="{% url 'student_resources' %}" class="resume-btn resource-btn">
+    View Resources
+  </a>
+</div>
+
+{% endblock %}

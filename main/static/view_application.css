@@ -1,0 +1,129 @@
+/* ===============================
+   VIEW APPLICATIONS PAGE STYLES
+   =============================== */
+
+/* Page wrapper */
+.applications-container {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 35px;
+    border-radius: 22px;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.25);
+}
+
+/* Page heading */
+.applications-container h3 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #5e2b97;
+    margin-bottom: 25px;
+}
+
+/* Table card */
+.applications-table {
+    background: #ffffff9d;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Table header */
+.applications-table thead {
+    background: linear-gradient(135deg, #7b1fa2, #512da8);
+    color: #ffffff9d;
+}
+
+.applications-table th {
+    padding: 14px;
+    font-weight: 600;
+    border: none;
+}
+
+/* Table body */
+.applications-table td {
+    padding: 14px;
+    font-size: 15px;
+    vertical-align: middle;
+}
+
+/* Zebra rows */
+.applications-table tbody tr:nth-child(odd) {
+    background-color: #ffffff9d;
+}
+
+.applications-table tbody tr:hover {
+    background-color: #efe6ff;
+    transition: 0.3s ease;
+}
+
+/* Resume button */
+.resume-btn {
+    background: #6a1b9a;
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 18px;
+    font-size: 13px;
+    border: none;
+    text-decoration: none;
+}
+
+.resume-btn:hover {
+    background: #5a1485;
+    color: #fff;
+}
+
+/* Status badge alignment */
+.applications-table .badge {
+    padding: 6px 14px;
+    font-size: 13px;
+    border-radius: 16px;
+}
+
+/* Update form layout */
+.update-form {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+/* Dropdown */
+.update-form select {
+    font-size: 13px;
+    border-radius: 12px;
+}
+
+/* Update button */
+.update-btn {
+    background: #26c6da;
+    color: #fff;
+    font-size: 13px;
+    padding: 6px;
+    border-radius: 16px;
+    border: none;
+}
+
+.update-btn:hover {
+    background: #1fb2c4;
+    color: #fff;
+}
+
+/* Empty state */
+.applications-table td[colspan] {
+    text-align: center;
+    color: #7b5e9a;
+    font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .applications-container {
+        padding: 22px;
+    }
+
+    .applications-container h3 {
+        font-size: 24px;
+    }
+
+    .applications-table {
+        overflow-x: auto;
+    }
+}

@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}All Companies{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'view_companies.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="container mt-4 companies-container">
+
+  <h3>All Companies</h3>
+  <p class="subtitle">List of companies registered by admin.</p>
+
+  <div class="companies-table-wrapper">
+    <table class="table companies-table">
+      <thead>
+        <tr>
+          <th>Company Name</th>
+          <th>Domain</th>
+          <th>Contact Email</th>
+          <th>Posted Jobs</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        {% for company in companies %}
+        <tr>
+          <td>{{ company.company_name }}</td>
+          <td>{{ company.domain }}</td>
+          <td>{{ company.user.email }}</td>
+          <td>
+            <ul>
+              {% for job in company.job_set.all %}
+                <li>{{ job.title }} — <span class="package">{{ job.package }}</span></li>
+              {% empty %}
+                <li class="no-jobs">No jobs</li>
+              {% endfor %}
+            </ul>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+{% endblock %}

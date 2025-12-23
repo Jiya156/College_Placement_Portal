@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %}Post a Job{% endblock %}
+
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'post_job.css' %}">
+{% endblock %}
+
+
+{% block content %}
+<div class="card mx-auto" style="max-width: 600px;">
+  <div class="card-body">
+    <h4 class="card-title text-center">Post New Job</h4>
+    <form method="POST">
+      {% csrf_token %}
+      <div class="mb-3"><label>Title</label><input type="text" name="title" class="form-control" required></div>
+      <div class="mb-3"><label>Package</label><input type="text" name="package" class="form-control" required></div>
+      <div class="mb-3"><label>Minimum CGPA</label><input type="number" name="min_cgpa" class="form-control" step="0.1"></div>
+      <div class="mb-3"><label>Eligible Branches</label><input type="text" name="eligible_branches" class="form-control"></div>
+      <div class="mb-3"><label>Job Details</label><textarea name="details" class="form-control" rows="3"></textarea></div>
+      <button type="submit" class="btn btn-success w-100">Post Job</button>
+    </form>
+  </div>
+</div>
+{% endblock %}

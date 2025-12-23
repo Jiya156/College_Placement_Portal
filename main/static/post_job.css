@@ -1,0 +1,78 @@
+/* ===============================
+   POST JOB PAGE STYLES
+   =============================== */
+
+/* Page wrapper */
+.container {
+  padding-top: 30px;
+}
+
+/* Card styling */
+.card {
+  border-radius: 16px;
+  border: none;
+  background: #ffffff;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* Card body */
+.card-body {
+  padding: 30px;
+}
+
+/* Title */
+.card-title {
+  font-weight: 700;
+  color: #6a1b9a;
+  margin-bottom: 25px;
+}
+
+/* Labels */
+label {
+  font-weight: 500;
+  color: #4a148c;
+  margin-bottom: 6px;
+}
+
+/* Inputs & textarea */
+.form-control {
+  border-radius: 10px;
+  border: 1px solid #d1c4e9;
+  padding: 10px 12px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+/* Input focus */
+.form-control:focus {
+  border-color: #7b1fa2;
+  box-shadow: 0 0 0 0.15rem rgba(123, 31, 162, 0.25);
+}
+
+/* Textarea resize */
+textarea.form-control {
+  resize: vertical;
+}
+
+/* Post Job button */
+.btn-success {
+  background: linear-gradient(135deg, #7b1fa2, #9c27b0);
+  border: none;
+  border-radius: 25px;
+  padding: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+/* Button hover */
+.btn-success:hover {
+  background: linear-gradient(135deg, #6a1b9a, #8e24aa);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(123, 31, 162, 0.3);
+}
+
+/* Button active */
+.btn-success:active {
+  transform: scale(0.98);
+}

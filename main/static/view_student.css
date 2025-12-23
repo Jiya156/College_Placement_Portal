@@ -1,0 +1,117 @@
+/* ===============================
+   VIEW STUDENTS PAGE STYLES
+   =============================== */
+
+/* Page Wrapper */
+.students-container {
+    background: rgba(255, 255, 255, 0.338);
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    margin-top: 30px;
+}
+
+/* Heading */
+.students-container h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #2c2c54;
+    margin-bottom: 6px;
+}
+
+/* Subtitle */
+.students-container p {
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+/* Table */
+.students-container table {
+    background: #d41f1f83;
+    border-collapse: collapse;
+    width: 100%;
+    border-radius: 20px;
+}
+
+/* Table Head */
+.students-container thead {
+    background: #0d6efd;
+    color: #ffffff;
+}
+
+.students-container th {
+    padding: 14px;
+    font-weight: 600;
+    text-align: center;
+    border: 1px solid #dee2e6;
+}
+
+/* Table Body */
+
+.students-container table {
+    background: #ffffff62;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
+}
+
+.students-container td {
+    padding: 14px;
+    text-align: center;
+    font-size: 15px;
+    border: 1px solid #dee2e6;
+    color: #333;
+}
+
+/* Row separation */
+.students-container tbody tr {
+    background-color: #f9f9fb80;
+}
+
+.students-container tbody tr:nth-child(even) {
+    background-color: #ffffff65;
+}
+
+/* Hover effect */
+.students-container tbody tr:hover {
+    background-color: #eef3ff;
+    transition: 0.2s ease;
+}
+
+/* Resume buttons */
+.students-container .btn {
+    font-size: 13px;
+    padding: 5px 10px;
+}
+
+/* No Resume text */
+.students-container .text-muted {
+    font-style: normal;   /* ❌ removes italics */
+    color: #6c757d;
+    font-weight: 500;
+}
+
+/* Applications list */
+.students-container ul {
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.students-container ul li {
+    list-style: none;
+    font-style: normal;   /* ❌ removes italics */
+    margin-bottom: 4px;
+    color: #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .students-container {
+        padding: 20px;
+    }
+
+    .students-container table {
+        font-size: 14px;
+    }
+}

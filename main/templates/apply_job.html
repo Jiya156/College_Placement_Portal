@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block title %}Apply for Job{% endblock %}
+
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'apply_job.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="container apply-job-page">
+  <div class="apply-job-card">
+
+    <h3 class="text-center mb-3">Apply for Job</h3>
+
+    <div class="job-details mb-4">
+      <h4>{{ job.title }}</h4>
+      <p><strong>Company:</strong> {{ job.company.company_name }}</p>
+      <p><strong>Package:</strong> {{ job.package }} LPA</p>
+      <p><strong>Details:</strong> {{ job.details }}</p>
+      <p><strong>Minimum CGPA Required:</strong> {{ job.min_cgpa }}</p>
+      <p><strong>Eligible Branches:</strong> {{ job.eligible_branches }}</p>
+    </div>
+
+    <form method="POST">
+      {% csrf_token %}
+      <div class="text-center">
+        <button type="submit" class="btn btn-success">Confirm Application</button>
+        <a href="{% url 'student_dashboard' %}" class="btn btn-secondary">Cancel</a>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

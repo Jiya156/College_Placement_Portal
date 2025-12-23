@@ -1,0 +1,72 @@
+/* ===============================
+   UPLOAD RESUME PAGE STYLES
+   =============================== */
+
+/* Page Wrapper */
+.upload-resume-page {
+    min-height: calc(80vh - 100px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Upload Card */
+.upload-resume-card {
+    background: #ffffff;
+    border-radius: 22px;
+    max-width: 520px;
+    width: 100%;
+    box-shadow: 0 22px 55px rgba(0, 0, 0, 0.25);
+    padding: 30px;
+}
+
+/* Heading */
+.upload-resume-card h4 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: #5a2b7a;
+    margin-bottom: 20px;
+}
+
+/* Labels */
+.upload-resume-card label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #4b1d6b;
+    margin-bottom: 6px;
+}
+
+/* File Input */
+.upload-resume-card input[type="file"] {
+    border-radius: 14px;
+    padding: 8px;
+    font-size: 14px;
+}
+
+/* Upload Button */
+.upload-resume-card .btn-primary {
+    margin-top: 15px;
+    background: linear-gradient(135deg, #6a1b9a, #8e44ad);
+    border: none;
+    border-radius: 18px;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+.upload-resume-card .btn-primary:hover {
+    background: linear-gradient(135deg, #5a1485, #7d3c98);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .upload-resume-card {
+        padding: 22px;
+    }
+
+    .upload-resume-card h4 {
+        font-size: 21px;
+    }
+}

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}Error{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+  <div class="alert alert-danger shadow p-4 text-center">
+    <h3>⚠️ Error</h3>
+    <p>{{ message }}</p>
+    <a href="{% url 'student_dashboard' %}" class="btn btn-primary mt-3">Go Back</a>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,248 @@
+/* ===============================
+   STUDENT DASHBOARD STYLES
+   =============================== */
+
+/* Page Wrapper */
+.student-dashboard {
+    background: rgba(255, 255, 255, 0.366);
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.25);
+    margin-top: 30px;
+}
+
+/* Welcome Heading */
+.student-dashboard h3 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #4b1d6b;
+    margin-bottom: 5px;
+}
+
+/* Placement Status */
+.student-dashboard p {
+    font-size: 15px;
+    color: #6b3a86;
+}
+
+/* Section Titles */
+.student-dashboard h5 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #5a2b7a;
+}
+
+/* ===============================
+   TABLE STYLING
+   =============================== */
+
+.student-dashboard table {
+    background: #f7f3ff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Table Header */
+.student-dashboard thead th {
+    background: linear-gradient(135deg, #8e44ad, #9b59b6);
+    color: #fff;
+    font-weight: 600;
+    padding: 14px;
+    border: none;
+}
+
+/* Table Cells */
+.student-dashboard td {
+    padding: 14px;
+    vertical-align: middle;
+    font-size: 15px;
+    color: #3b2354;
+    border: 1px solid #e2d7f3;
+}
+
+/* Zebra Rows */
+.student-dashboard tbody tr:nth-child(odd) td {
+    background-color: #faf7ff;
+}
+
+/* Hover Effect */
+.student-dashboard tbody tr:hover td {
+    background-color: #efe6ff;
+    transition: 0.3s ease;
+}
+
+/* ===============================
+   STATUS BADGES
+   =============================== */
+
+.badge {
+    padding: 6px 12px;
+    font-size: 13px;
+    border-radius: 12px;
+}
+
+/* ===============================
+   BUTTON STYLES
+   =============================== */
+
+.student-dashboard .btn {
+    border-radius: 14px;
+    font-size: 14px;
+    padding: 6px 14px;
+    transition: all 0.3s ease;
+}
+
+/* Apply Button */
+.student-dashboard .btn-primary {
+    background: linear-gradient(135deg, #6a1b9a, #8e44ad);
+    border: none;
+}
+
+.student-dashboard .btn-primary:hover {
+    background: linear-gradient(135deg, #5a1485, #7d3c98);
+}
+
+/* Upload / Secondary */
+.student-dashboard .btn-secondary {
+    background: linear-gradient(135deg, #7f8c8d, #95a5a6);
+    border: none;
+}
+
+.student-dashboard .btn-secondary:hover {
+    background: linear-gradient(135deg, #6c7a7b, #7f8c8d);
+}
+
+/* Info Button */
+.student-dashboard .btn-info {
+    background: linear-gradient(135deg, #5dade2, #3498db);
+    border: none;
+    color: #fff;
+}
+
+.student-dashboard .btn-info:hover {
+    background: linear-gradient(135deg, #4fa3d1, #2e86c1);
+}
+
+/* Delete Button */
+.student-dashboard .btn-danger {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    border: none;
+}
+
+.student-dashboard .btn-danger:hover {
+    background: linear-gradient(135deg, #d84336, #a93226);
+}
+
+/* ===============================
+   RESPONSIVE
+   =============================== */
+
+@media (max-width: 768px) {
+    .student-dashboard {
+        padding: 22px;
+    }
+
+    .student-dashboard h3 {
+        font-size: 24px;
+    }
+
+    .student-dashboard table {
+        font-size: 14px;
+    }
+}
+
+/* ===============================
+   STUDENT DASHBOARD BUTTON STYLES
+   =============================== */
+
+/* Action column alignment */
+.action-cell {
+    text-align: center;
+}
+
+/* Base button style */
+.action-btn,
+.status-btn,
+.resume-btn {
+    display: inline-block;
+    min-width: 110px;
+    padding: 7px 16px;
+    border-radius: 18px;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Apply button */
+.apply-btn {
+    background: linear-gradient(135deg, #6a1b9a, #8e44ad);
+    color: #fff;
+}
+
+.apply-btn:hover {
+    background: linear-gradient(135deg, #5a1485, #7d3c98);
+}
+
+/* Status buttons */
+.status-applied {
+    background: #fbc02d;
+    color: #3a2a00;
+}
+
+.status-shortlisted {
+    background: #4fc3f7;
+    color: #0a3c5f;
+}
+
+.status-selected {
+    background: #66bb6a;
+    color: #0f3d1b;
+}
+
+.status-rejected {
+    background: #ef5350;
+    color: #fff;
+}
+
+.status-not-eligible {
+    background: #bdbdbd;
+    color: #424242;
+}
+
+/* Resume section */
+.resume-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* Resume buttons */
+.view-btn {
+    background: linear-gradient(135deg, #6a1b9a, #8e44ad);
+    color: #fff;
+}
+
+.delete-btn {
+    background: #e53935;
+    color: #fff;
+}
+
+.upload-btn {
+    background: #7e57c2;
+    color: #fff;
+}
+
+.resource-btn {
+    background: #26c6da;
+    color: #fff;
+}
+
+.resume-btn:hover {
+    opacity: 0.9;
+}

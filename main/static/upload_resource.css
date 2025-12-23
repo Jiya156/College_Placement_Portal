@@ -1,0 +1,68 @@
+/* ===== Resource Pages Styling ===== */
+
+/* Page heading */
+h3 {
+    color: #3b1d5a;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* ===== TABLE ===== */
+.table {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* 🔥 THIS OVERRIDES BOOTSTRAP BLACK HEADER */
+.table thead th {
+    background: linear-gradient(135deg, #8e44ad, #c77dff) !important;
+    color: #ffffff !important;
+    border: none !important;
+    font-weight: 600;
+    padding: 14px;
+    text-align: left;
+}
+
+/* Table body */
+.table tbody td {
+    padding: 12px;
+    color: #333;
+    vertical-align: middle;
+}
+
+/* Striped rows */
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f6e9ff;
+}
+
+/* Hover effect */
+.table tbody tr:hover {
+    background-color: #ecd6ff;
+}
+
+/* ===== BUTTONS ===== */
+.btn-success {
+    background: linear-gradient(135deg, #872ecc, #6a27ae);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, #872ecc, #6a27ae);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+
+.btn-success:hover,
+.btn-secondary:hover {
+    opacity: 0.9;
+}
+
+/* Upload button spacing */
+.mt-3 {
+    margin-top: 20px;
+}

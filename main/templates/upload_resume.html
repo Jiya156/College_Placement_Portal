@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %}Upload Resume{% endblock %}
+
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'upload_resume.css' %}">
+{% endblock %}
+
+
+{% block content %}
+<div class="container upload-resume-page">
+  <div class="upload-resume-card">
+
+    <h4>Upload Resume</h4>
+    <form method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+      <div class="mb-3">
+        <label>Select Resume (PDF/DOCX)</label>
+        <input type="file" name="resume" class="form-control" accept=".pdf" required>
+      </div>
+      <button type="submit" class="btn btn-primary w-100">Upload</button>
+    </form>
+  </div>
+</div>
+{% endblock %}
