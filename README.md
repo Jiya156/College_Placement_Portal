@@ -106,3 +106,20 @@ college_placement/
 - Advanced reporting and analytics
 - Online tests and interviews
 - Cloud deployment
+
+----
+
+# 📚 Academic Use
+
+This project is developed as part of an academic mini/major project and demonstrates:
+
+- Web application development
+- Database design
+- Software engineering principles
+- Real-world problem solving
+
+# 🧑‍💻 Developed By
+
+Jiya Modi
+Depaartment - CPC
+Gujarat University
