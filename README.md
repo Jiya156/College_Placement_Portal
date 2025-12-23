@@ -68,26 +68,26 @@ The system supports:
 
 ## 📂 Project Structure
 
-college_placement/
-│
-├── placement_app/
-│ ├── models.py
-│ ├── views.py
-│ ├── urls.py
-│
-├── templates/
-│ ├── admin/
-│ ├── student/
-│ ├── company/
-│
-├── static/
-│ ├── css/
-│
-├── media/
-│
-├── manage.py
-├── requirements.txt
-└── README.md
+college_placement/<br>
+│<br>
+├── placement_app/<br>
+│ ├── models.py<br>
+│ ├── views.py<br>
+│ ├── urls.py<br>
+│<br>
+├── templates/<br>
+│ ├── admin/<br>
+│ ├── student/<br>
+│ ├── company/<br>
+│<br>
+├── static/<br>
+│ ├── css/<br>
+│<br>
+├── media/<br>
+│<br>
+├── manage.py<br>
+├── requirements.txt<br>
+└── README.md<br>
 
 # 🔐 Security Features
 
